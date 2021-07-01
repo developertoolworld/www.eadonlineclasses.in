@@ -1,0 +1,8 @@
+RewriteEngine on 
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+Authtype Basic
+AuthName "Restricted Content"
+AuthUserFile C:\wamp\www\eadonlineclasses.in\.htpasswd
+require valid-user
